@@ -46,7 +46,7 @@ const CLASSES = {
     CheLoginPage: 'CheLoginPage',
     GitHubUtil: 'GitHubUtil',
     KeyCloakUtil: 'KeyCloakUtil',
-    CheVCSApi: 'CheVCSApi',
+    CheGitApi: 'CheGitApi',
     GitPlugin: 'GitPlugin',
     TestWorkspaceUtil: 'TestWorkspaceUtil',
     NotificationCenter: 'NotificationCenter',

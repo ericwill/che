@@ -52,7 +52,9 @@ import { CheMultiuserTokenHandler } from './utils/requestHandlers/tokens/CheMult
 import { CheSingleUserAuthorizationHeaderHandler } from './utils/requestHandlers/headers/CheSingleUserAuthorizationHeaderHandler';
 import { ITokenHandler } from './utils/requestHandlers/tokens/ITokenHandler';
 import { CheApiRequestHandler } from './utils/requestHandlers/CheApiRequestHandler';
-
+import { KeyCloakUtil } from './utils/keycloak/KeyCloakUtil';
+import { CheGitApi } from './utils/VCS/CheGitApi';
+import { GitHubUtil} from './utils/VCS/github/GitHubUtil';
 
 const e2eContainer: Container = new Container();
 
@@ -102,5 +104,7 @@ e2eContainer.bind<CheLoginPage>(CLASSES.CheLoginPage).to(CheLoginPage).inSinglet
 e2eContainer.bind<NotificationCenter>(CLASSES.NotificationCenter).to(NotificationCenter).inSingletonScope();
 e2eContainer.bind<PreferencesHandler>(CLASSES.PreferencesHandler).to(PreferencesHandler).inSingletonScope();
 e2eContainer.bind<CheApiRequestHandler>(CLASSES.CheApiRequestHandler).to(CheApiRequestHandler).inSingletonScope();
-
+e2eContainer.bind<KeyCloakUtil>(CLASSES.KeyCloakUtil).to(KeyCloakUtil).inSingletonScope();
+e2eContainer.bind<CheGitApi>(CLASSES.CheGitApi).to(CheGitApi).inSingletonScope();
+e2eContainer.bind<GitHubUtil>(CLASSES.GitHubUtil).to(GitHubUtil).inSingletonScope();
 export { e2eContainer };
